@@ -1,0 +1,32 @@
+.user-list__link {
+  display: flex;
+  padding: 16px 0;
+  line-height: 24px;
+  text-decoration: none;
+  color: $text-color-secondary;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 10px 0;
+  }
+
+  @media (max-width: 767px) {
+    color: $text-color-main;
+    padding: 15px 35px;
+  }
+}
+
+.user-list__icon {
+  display: block;
+}
+
+.user-list__text {
+  padding-left: 11px;
+
+  @media (max-width: $laptop-width) {
+    padding-left: 5px;
+  }
+}

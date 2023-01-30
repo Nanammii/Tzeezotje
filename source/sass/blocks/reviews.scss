@@ -1,0 +1,136 @@
+.reviews {
+  background-color: $back-color-reviews;
+}
+
+.reviews__slide {
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 219px;
+    left: calc(50% - 41px);
+    width: 83px;
+    height: 58px;
+    background: url("../../img/icons/quote-icon.svg") no-repeat center;
+    background-size: 83px 58px;
+
+    @media (max-width: $laptop-large-width) {
+      top: 158px;
+    }
+
+    @media (max-width: $laptop-width) {
+      top: 108px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 70px;
+      background-size: 60px 42px;
+    }
+
+    @media (max-width: $mobile2-width) {
+      top: 45px;
+      background-size: 40px 28px;
+    }
+  }
+}
+
+.reviews__title {
+  margin: 0;
+  padding-top: 311px;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 600;
+  color: $text-color-third;
+
+  @media (max-width: $laptop-large-width) {
+    padding-top: 250px;
+  }
+
+  @media (max-width: $laptop-width) {
+    padding-top: 200px;
+    font-size: 30px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 150px;
+    font-size: 24px;
+  }
+
+  @media (max-width: $mobile2-width) {
+    padding: 100px 30px 0 30px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+.review__text {
+  margin: 0;
+  padding: 20px 192px 40px;
+  line-height: 40px;
+  color: $text-color-secondary;
+
+  @media (max-width: $laptop-large-width) {
+    padding-inline: 130px;
+  }
+
+  @media (max-width: $laptop-width) {
+    padding: 15px 75px 35px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 32px;
+    padding-bottom: 25px;
+  }
+
+  @media (max-width: $mobile2-width) {
+    padding: 10px 50px 20px;
+    font-size: 12px;
+    line-height: 24px;
+  }
+}
+
+.reviews__author {
+  margin: 0;
+  padding-bottom: 220px;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.245em;
+  color: $text-color-third;
+
+  @media (max-width: $laptop-large-width) {
+    padding-bottom: 180px;
+  }
+
+  @media (max-width: $laptop-width) {
+    font-size: 20px;
+    padding-bottom: 150px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 100px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  @media (max-width: $mobile2-width) {
+    padding-bottom: 50px;
+    font-size: 16px;
+    letter-spacing: 0.150em;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $decor-color;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
+  color: $text-color-secondary;
+}
