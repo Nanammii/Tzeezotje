@@ -12,7 +12,7 @@
 4. JavaScript ES6
 
 
-[Demo preview 1](https://nanammii.github.io/nevatrip-test/)
+[Demo preview](https://nanammii.github.io/Tzeezotje/)
 
 # Тестовое задание #
 
