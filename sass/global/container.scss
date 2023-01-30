@@ -1,0 +1,35 @@
+.container {
+  margin: 0 auto;
+  padding: 0 375px;
+  max-width: 1170px;
+
+  @media (max-width: $desktop-small-width) {
+    max-width: 1180px;
+    padding: 0 290px;
+  }
+
+  @media (max-width: $laptop-large-width) {
+    max-width: 1180px;
+    padding: 0 210px;
+  }
+
+  @media (max-width: $laptop-width) {
+    max-width: 1140px;
+    padding: 0 110px;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 884px;
+    padding: 0 70px;
+  }
+
+  @media (max-width: $mobile2-width) {
+    max-width: 698px;
+    padding: 0 35px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 345px;
+    padding: 0 15px;
+  }
+}

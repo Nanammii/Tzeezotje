@@ -1,0 +1,83 @@
+.field-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.field-group__wrap {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+
+  &--name {
+    margin-bottom: 5px;
+  }
+
+  &--time {
+    grid-template-columns: 3fr 4fr 2fr;
+  }
+}
+
+.field-group__title {
+  width: 100%;
+  text-align: start;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.field-group__label {
+  display: block;
+  padding: 15px 0;
+  text-align: start;
+  line-height: 19px;
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+  }
+}
+
+.field-group__input {
+  width: 100%;
+  max-height: 58px;
+  padding: 16px;
+  border: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $text-color-main;
+  background-color: $input-back-color;
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+  }
+
+  &--time {
+    width: 90%;
+  }
+
+  &--textarea {
+    max-height: 100%;
+  }
+
+  &:hover {
+    background-color: $line-color-secondary;
+  }
+}
+
+.field-group__select {
+  width: 100%;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: inherit;
+  text-transform: uppercase;
+  color: $text-color-main;
+  border: 2px solid $line-color-secondary;
+  border-radius: 4px;
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,122 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: $modal-color;
+  z-index: 12;
+  overflow: scroll;
+
+  &--close {
+    display: none;
+  }
+}
+
+.modal__wrapper {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+  padding: 45px 50px 35px;
+  text-align: center;
+  background-color: $back-color-main;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+
+  @media (max-width: $mobile2-width) {
+    max-width: 290px;
+    padding: 30px 15px;
+  }
+}
+
+.modal__button-close {
+  position: absolute;
+  padding: 0;
+  top: 10px;
+  right: 10px;
+  width: 53px;
+  height: 53px;
+  background-color: $line-color-secondary;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 11px;
+    width: 30px;
+    height: 2px;
+    background-color: $modal-line-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade-in($modal-line-color, 0.3);
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-title {
+  margin: 0;
+  padding: 10px 0;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 50px;
+  }
+}
+
+.modal__buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  @media (max-width: $mobile2-width) {
+    gap: 20px;
+  }
+}
+
+.modal__button {
+  padding: 10px 30px;
+  background-color: $button-color;
+  color: $text-color-secondary;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+
+  &--reset {
+    background-color: $line-color;
+    color: $modal-line-color;
+
+    &:hover {
+      background-color: $line-color;
+      opacity: 0.6;
+    }
+  }
+
+  @media (max-width: $mobile2-width) {
+    font-size: 14px;
+    padding-inline: 15px;
+  }
+}

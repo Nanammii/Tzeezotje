@@ -1,0 +1,226 @@
+.header {
+  position: relative;
+  background: $back-color-header url("../img/background-header.jpg") no-repeat center;
+}
+
+.header__top-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__toggle-wrap {
+  //position: relative;
+  display: none;
+
+  @media (max-width: $only-mobile-width) {
+    display: block;
+    z-index: 11;
+  }
+}
+
+.header__toggle {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  width: 28px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 5;
+
+  &--closed {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $line-color;
+      box-shadow: 0 10px 0 0 $line-color, 0 20px 0 0 $line-color;
+    }
+
+    &:active::before {
+      background-color: fade-in($line-color, 0.3);
+      box-shadow: 0 10px 0 0 fade-in($line-color, 0.3),
+      0 20px 0 0 fade-in($line-color, 0.3);
+    }
+  }
+
+  &--opened {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -3px;
+      width: 36px;
+      height: 2px;
+      background-color: #222222;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: fade-in(#222222, 0.3);
+    }
+  }
+}
+
+.header__logo {
+  display: block;
+  padding: 55px 0 154px;
+  //margin-right: auto;
+  margin-right: 130px;
+
+  @media (max-width: $desktop-small-width) {
+    margin-right: 100px;
+  }
+
+  @media (max-width: $laptop-large-width) {
+    margin-right: 75px;
+  }
+
+  @media (max-width: $laptop-width) {
+    margin-right: 40px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 25px;
+    padding: 30px 0 90px;
+  }
+
+  @media (max-width: $only-mobile-width) {
+    padding: 12px 0 50px 55px;
+    margin: 0;
+  }
+}
+
+.header__image-logo {
+  display: block;
+  min-width: 269px;
+  max-height: 55px;
+
+  @media (max-width: $tablet-width) {
+    min-width: 170px;
+  }
+}
+
+.header__bottom-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 265px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 150px;
+  }
+
+  @media (max-width: $mobile2-width) {
+    padding-bottom: 80px;
+  }
+}
+
+.header__slogan {
+  margin: 0;
+  grid-column: 1/3;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $text-color-secondary;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (max-width: $mobile2-width) {
+    font-size: 16px;
+  }
+}
+
+.header__title {
+  margin: 0;
+  padding: 24px 0 40px;
+  grid-column: 1/3;
+  font-size: 64px;
+  line-height: 88px;
+  font-weight: 700;
+  color: $text-color-secondary;
+
+  @media (max-width: $laptop-large-width) {
+    font-size: 60px;
+  }
+
+  @media (max-width: $laptop-width) {
+    font-size: 50px;
+    line-height: 70px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 55px;
+    padding: 18px 0 35px;
+  }
+
+  @media (max-width: $mobile2-width) {
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
+
+.header__button-reserve {
+  padding: 38px 64px;
+  grid-column: 1/2;
+  justify-self: start;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $text-color-secondary;
+  background-color: $button-color;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+
+  @media (max-width: $laptop-width) {
+    padding: 28px 46px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 16px;
+    padding: 20px 35px;
+  }
+
+  @media (max-width: $mobile2-width) {
+    grid-column: 1/3;
+    font-size: 14px;
+    padding: 15px 25px;
+  }
+}
+
+.header__social {
+  padding-top: 26px;
+  grid-column: 2/3;
+  justify-self: end;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 8px;
+  }
+
+  @media (max-width: $mobile2-width) {
+    grid-column: 1/3;
+    justify-self: start;
+    padding-top: 20px;
+  }
+}
