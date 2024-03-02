@@ -1,8 +1,8 @@
-# Тестовое задание - верстка по макету Tzeezotje
+# верстка по макету Tzeezotje
 
 ---
 
-Нужно сверстать страницу по макету figma.
+Нужно сверстать страницу по макету [figma](https://www.figma.com/file/wOSvN5jgixUCn3bwGfTvPs/Tzeezotje-(Copy)-(Copy)?type=design&node-id=0-1&mode=design&t=NvVIN6NQfvSSmswz-0).
 
 Используемые технологии:
 
